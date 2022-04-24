@@ -1,0 +1,230 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage[ngerman]{babel}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,mathtools}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage[dvipsnames]{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{caption}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+\renewcommand{\lstlistingname}{Code}% Listing -> Algorithm
+\renewcommand{\lstlistlistingname}{List of \lstlistingname s}% List of Listings -> List of Algorithms
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=3pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=3
+}
+\lstset{style=mystyle}
+
+\usepackage{hyperref}
+\hypersetup{
+    pdftex,
+    pdftitle={Versuch ASM},
+    pdfsubject={Versuch ASM},
+    pdfauthor=AJC,
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+\begin{document}
+
+\title{
+    \centering
+    \includegraphics[width=0.5\textwidth]{../OTHR_OTHR_Logo.pdf}\\
+    \textsc{Drehstrom-Asynchronmaschine mit Schleifringläufer} \\
+}
+
+\maketitle
+
+\begin{abstract}
+    In diesem Versuch soll eine Käfigläufer-Asynchronmaschine genauer
+    untersucht werden. Zur Bestimmung der ESB- Parameter wurde hierzu der
+    Leerlauf, als auch Kurzschlussversuch durchgeführt\dots
+\end{abstract}
+
+\section{Anlaufmoment und Kippmoment}
+
+In den Abbildungen \ref{fig:Anlaufmoment} und \ref{fig:Kippmoment} wird das
+Anlaufmoment der ASM über die Spannung graphisch dargestellt.
+
+Die obere Hälfte der Abbildungen zeigt eine linearisierte Extrapolation des
+Verlaufs der Drehmomente $M_{an}$ und $M_{\textit{Kipp}}$ über die Spannung
+$U_1^2$, bis $400^2V$.
+
+Aber in der unteren Hälfte der Abbildungen wird das Drehmoment der ASM direkt
+über die Spannung $U_1$ dargestellt und mit einer Polynomfunktion extrapoliert.
+
+\vspace{-7ex}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\columnwidth]{./anlaufmoment.pdf}
+    \caption{Anlaufmoment}
+    \label{fig:Anlaufmoment}
+\end{figure}
+
+Der lineare Verlauf in Abb.\ref{fig:Anlaufmoment}, $M_{an}(U)$ [\textcolor{red}{rot}]:
+\begin{gather*}
+    0.1511 x - 0.07306 \\
+    M_{an}(U_N=400V)=24\ Nm
+\end{gather*}
+
+Und die Polynomfunktion $M_{an}(U)$ [\textcolor{blue}{blau}]:
+\begin{gather*}
+    0.000199 x^2 -0.007889 x + 0.190977\\
+    M_{an}(U_N=400V)=28\ Nm
+\end{gather*}
+
+\vspace{-7ex}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\columnwidth]{./kippmoment.pdf}
+    \caption{Kippmoment}
+    \label{fig:Kippmoment}
+\end{figure}
+
+Der lineare Verlauf in Abb.\ref{fig:Kippmoment}, $M_{\textit{Kipp}}(U)$ [\textcolor{red}{rot}]:
+\begin{gather*}
+    0.1863 x - 0.1431\\
+    M_{Kipp}(U_N=400V)=29 \ Nm
+\end{gather*}
+
+Und die Polynomfunktion $M_{\textit{Kipp}}(U)$ [\textcolor{blue}{blau}]:
+\begin{gather*}
+    0.000198 x^2 - 0.0024495 x -0.035842\\
+    M_{Kipp}(U_N=400V)=30\ Nm
+\end{gather*}
+
+
+
+\subsection{Zusammenhang zwischen Drehmoment und Spannung}
+
+Bei zunehmender Spannung $U_1$ steigt das Drehmoment M quadratisch an. Das
+Drehmoment ist direkt proportional zu $U^2$ ($M \sim U^2$) und darauf ergibt sich
+folgende Beziehnung: \[ M = \textit{konst.} \cdot U \]
+
+
+\section{Bestimmung der Ersatzschaltbildparameter}
+\subsection{Parameterbestimmung aufgrund der Kurzschlussmessung}
+
+Umrechnen der gemessenen Widerstandswerte auf die Bezugstemperatur $T=75^\circ$C :
+\begin{align*}
+    R_{1_{75}} & = R_{1_{20}}\frac{235^\circ\text{C}+75^\circ\text{C}}{235^\circ\text{C}+25^\circ\text{C}}         \\
+               & = 2,32\ \Omega\cdot \frac{235^\circ\text{C}+75^\circ\text{C}}{235^\circ\text{C}+25^\circ\text{C}} \\
+               & = 2,820\ \Omega
+\end{align*}
+
+Berechnen des Läuferwiderstands mithilfe der Übersetzungsverhältnis:
+\begin{align*}
+    R_2^\text{\textquotesingle}        & = \ddot{u}^2\cdot R_2 = 4.7^2 \cdot 216m\Omega   = 4,77 \Omega                                    \\
+    R_{2_{75}}^\text{\textquotesingle} & = R_{2_{20}}\frac{235^\circ\text{C}+75^\circ\text{C}}{235^\circ\text{C}+25^\circ\text{C}}         \\
+                                       & = 4,77\ \Omega\cdot \frac{235^\circ\text{C}+75^\circ\text{C}}{235^\circ\text{C}+25^\circ\text{C}} \\
+                                       & = 5,8\ \Omega
+\end{align*}
+
+Es gilt:
+\begin{equation} \label{eq:Kurzschlusswiderstand_gemessen}
+    \boxed{R_k = R_1 + R_2^\text{\textquotesingle} = 2,820\ \Omega + 5,8\ \Omega = 8,62\ \Omega}
+\end{equation}
+
+Aus der Kurzschlussmessung in 4.2.1 wird der Kurzschlusswiderstand $R_k$ mit:
+
+\begin{equation}
+    \boxed{R_k = \frac{U_k}{\mathfrak{Re}\{I_k\}}}
+\end{equation}
+
+\begin{table}[htbp]
+    \normalsize
+    \def\arraystretch{1.5}
+    \begin{tabularx}{\columnwidth}{XXXXX}
+        \hline
+        $I_1[A]$ & $P_1[W]$ & $U[V]$ & $G[g]$ & $M_{an}[Nm]$ \\
+        \hline\hline
+        4.2      & 392      & 113    & 464    & 1.82074      \\
+        \hline
+    \end{tabularx}
+    \caption{Kurzschlussmessung 4.2.1}
+    \label{tab:Kurzschlussmessung}
+\end{table}
+
+Mit den Werten aus der Tabelle \ref{tab:Kurzschlussmessung} kann $cos\varphi_k$ berechnet werden:
+
+\begin{equation}
+    \boxed{cos\varphi_k = \frac{P_1}{\sqrt{3} \cdot I_1 \cdot U}}
+\end{equation}
+
+\begin{equation} \label{eq:cosphi_solved}
+    cos\varphi_k = \frac{392 W}{\sqrt{3} \cdot 4,2 A \cdot 113 V} = 0,4769
+\end{equation}
+
+Mithilfe der Formel \ref{eq:cosphi_solved} kann der Realteil der Strom $I_1$ ermittelt:
+
+\begin{align} \label{eq:Ik_solved_real}
+    \varphi                      & = \arccos\left(0,4769\right) = 61,51^\circ             \\
+    \Aboxed{\mathfrak{Re}\{I_k\} & = cos\varphi_k \cdot I_k = 0,4769 \cdot 4,2 A = 2A}    \\
+    \mathfrak{Im}\{I_k\}         & = sin\varphi_k \cdot I_k = 0,8790 \cdot 4,2 A = 3,69 A
+\end{align}
+
+Da die Maschine im Stern geschaltet ist, ergibt sich für die Spannung $U_k$:
+
+\begin{equation} \label{eq:Uk_solved}
+    \boxed{U_k = \frac{U}{\sqrt{3}}} = \frac{113 V}{\sqrt{3}} = 65,24 V
+\end{equation}
+
+Jetzt kann $R_k$ aus den Formeln \ref{eq:Ik_solved_real} und \ref{eq:Uk_solved} berechnet werden:
+
+\begin{equation} \label{eq:Kurzschlusswiderstand_calc}
+    \boxed{R_k = \frac{65,24V}{2A} = \underline{32.62\ \Omega}}
+\end{equation}
+
+Die Streureaktanzen $X_{1\sigma}$ und $X_{2\sigma}^\text{\textquotesingle}$ werden mit:
+
+\begin{equation} \label{eq:Streureaktanzen}
+    X_{1\sigma} + X_{2\sigma}^\text{\textquotesingle} = \frac{U_k}{\mathfrak{Im}\{I_k\}}
+\end{equation}
+
+Da $X_{1\sigma} = X_{2\sigma}^\text{\textquotesingle}$ ist, ergibt sich:
+
+\begin{align} \label{eq:Streureaktanzen_solved}
+    \Aboxed{X_{1\sigma} & = X_{2\sigma}^\text{\textquotesingle} = \frac{U_k}{\mathfrak{Im}\{I_k\}}\cdot\frac{1}{2}} \\
+                        & = \frac{65,24V}{3,69A}\cdot\frac{1}{2} = 8.84\ \Omega
+\end{align}
+
+\subsubsection{Vergleich zwischen ermittelter und gemessener Kurzschlusswiderstand}
+
+Der gemessene Widerstandswert (Formel \ref{eq:Kurzschlusswiderstand_gemessen}),
+ist im Vergleich zudem rechnerisch ermittelter Wert (Formel \ref{eq:Kurzschlusswiderstand_calc}) um den Faktor 4 größer.
+
+Eine mögliche Erklärung wäre, dass beim Kurzschlussversuch die Temperatur der
+Asynchronmaschine sehr schnell angestiegen ist und damit auch der Widerstandswert.
+
+\end{document}

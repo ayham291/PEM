@@ -94,13 +94,13 @@ Aber in der unteren Hälfte der Abbildungen wird das Drehmoment der ASM direkt
 
 Der lineare Verlauf in Abb.\ref{fig:Anlaufmoment}, $M_{an}(U)$ [\textcolor{red}{rot}]:
 \begin{gather*}
-    0.1511 x - 0.07306 \\
+    0,1511 x - 0,07306 \\
     M_{an}(U_N=400V)=24\ Nm
 \end{gather*}
 
 Und die Polynomfunktion $M_{an}(U)$ [\textcolor{blue}{blau}]:
 \begin{gather*}
-    0.000199 x^2 -0.007889 x + 0.190977\\
+    0,000199 x^2 -0,007889 x + 0,190977\\
     M_{an}(U_N=400V)=28\ Nm
 \end{gather*}
 
@@ -114,13 +114,13 @@ Und die Polynomfunktion $M_{an}(U)$ [\textcolor{blue}{blau}]:
 
 Der lineare Verlauf in Abb.\ref{fig:Kippmoment}, $M_{\textit{Kipp}}(U)$ [\textcolor{red}{rot}]:
 \begin{gather*}
-    0.1863 x - 0.1431\\
+    0,1863 x - 0,1431\\
     M_{Kipp}(U_N=400V)=29 \ Nm
 \end{gather*}
 
 Und die Polynomfunktion $M_{\textit{Kipp}}(U)$ [\textcolor{blue}{blau}]:
 \begin{gather*}
-    0.000198 x^2 - 0.0024495 x -0.035842\\
+    0,000198 x^2 - 0,0024495 x -0,035842\\
     M_{Kipp}(U_N=400V)=30\ Nm
 \end{gather*}
 
@@ -145,7 +145,7 @@ Umrechnen der gemessenen Widerstandswerte auf die Bezugstemperatur $T=75^\circ$C
 
 Berechnen des Läuferwiderstands mithilfe der Übersetzungsverhältnis:
 \begin{align*}
-    R_2^\text{\textquotesingle}        & = \ddot{u}^2\cdot R_2 = 4.7^2 \cdot 216m\Omega   = 4,77 \Omega                                    \\
+    R_2^\text{\textquotesingle}        & = \ddot{u}^2\cdot R_2 = 4,7^2 \cdot 216m\Omega   = 4,77 \Omega                                    \\
     R_{2_{75}}^\text{\textquotesingle} & = R_{2_{20}}\frac{235^\circ\text{C}+75^\circ\text{C}}{235^\circ\text{C}+25^\circ\text{C}}         \\
                                        & = 4,77\ \Omega\cdot \frac{235^\circ\text{C}+75^\circ\text{C}}{235^\circ\text{C}+25^\circ\text{C}} \\
                                        & = 5,8\ \Omega
@@ -169,7 +169,7 @@ Aus der Kurzschlussmessung in 4.2.1 wird der Kurzschlusswiderstand $R_k$ mit:
         \hline
         $I_1[A]$ & $P_1[W]$ & $U[V]$ & $G[g]$ & $M_{an}[Nm]$ \\
         \hline\hline
-        4.2      & 392      & 113    & 464    & 1.82074      \\
+        4,2      & 392      & 113    & 464    & 1,82074      \\
         \hline
     \end{tabularx}
     \caption{Kurzschlussmessung 4.2.1}
@@ -189,7 +189,7 @@ Mit den Werten aus der Tabelle \ref{tab:Kurzschlussmessung} kann $cos\varphi_k$ 
 Mithilfe der Formel \ref{eq:cosphi_solved} kann der Realteil der Strom $I_1$ ermittelt:
 
 \begin{align} \label{eq:Ik_solved_real}
-    \varphi                      & = \arccos\left(0,4769\right) = 61,51^\circ             \\
+    \varphi_k                      & = \arccos\left(0,4769\right) = 61,51^\circ             \\
     \Aboxed{\mathfrak{Re}\{I_k\} & = cos\varphi_k \cdot I_k = 0,4769 \cdot 4,2 A = 2A}    \\
     \mathfrak{Im}\{I_k\}         & = sin\varphi_k \cdot I_k = 0,8790 \cdot 4,2 A = 3,69 A
 \end{align}
@@ -203,7 +203,7 @@ Da die Maschine im Stern geschaltet ist, ergibt sich für die Spannung $U_k$:
 Jetzt kann $R_k$ aus den Formeln \ref{eq:Ik_solved_real} und \ref{eq:Uk_solved} berechnet werden:
 
 \begin{equation} \label{eq:Kurzschlusswiderstand_calc}
-    \boxed{R_k = \frac{65,24V}{2A} = \underline{32.62\ \Omega}}
+    \boxed{R_k = \frac{65,24V}{2A} = \underline{32,62\ \Omega}}
 \end{equation}
 
 Die Streureaktanzen $X_{1\sigma}$ und $X_{2\sigma}^\text{\textquotesingle}$ werden mit:
@@ -216,7 +216,7 @@ Da $X_{1\sigma} = X_{2\sigma}^\text{\textquotesingle}$ ist, ergibt sich:
 
 \begin{align} \label{eq:Streureaktanzen_solved}
     \Aboxed{X_{1\sigma} & = X_{2\sigma}^\text{\textquotesingle} = \frac{U_k}{\mathfrak{Im}\{I_k\}}\cdot\frac{1}{2}} \\
-                        & = \frac{65,24V}{3,69A}\cdot\frac{1}{2} = 8.84\ \Omega
+                        & = \frac{65,24V}{3,69A}\cdot\frac{1}{2} = 8,84\ \Omega
 \end{align}
 
 \subsubsection{Vergleich zwischen ermittelter und gemessener Kurzschlusswiderstand}

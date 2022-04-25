@@ -12,6 +12,8 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \usepackage{listings}
 \usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{siunitx}
 \usepackage{float}
 \usepackage{caption}
 
@@ -74,6 +76,15 @@
 
 \section{Anlaufmoment und Kippmoment}
 
+Bei diesem Versuch wurde das Drehmoment mit einem 40cm langen Stab und einer
+Digitalen Wage gemessen.
+
+Mit der Gleichung \ref{eq:moment} wurde das Drehmoment aus den Messungen berechnet.
+
+\begin{equation} \label{eq:moment}
+    M=\frac{G\cdot g\cdot l}{1000} = \frac{G(I_1)\cdot 9.81\si{m/s^2} \cdot 40\si{cm}}{1000} \si{Nm}
+\end{equation}
+
 In den Abbildungen \ref{fig:Anlaufmoment} und \ref{fig:Kippmoment} wird das
 Anlaufmoment der ASM über die Spannung graphisch dargestellt.
 
@@ -96,13 +107,13 @@ extrapoliert.
 Der lineare Verlauf in Abb.\ref{fig:Anlaufmoment}, $M_{an}(U)$ [\textcolor{red}{rot}]:
 \begin{gather*}
     0,1511 x - 0,07306 \\
-    M_{an}(U_N=400V)=24\ Nm
+    M_{an}(U_N=400^2V^2)=24,11\ Nm
 \end{gather*}
 
 Und die quadratische Polynomfunktion $M_{an}(U)$ [\textcolor{blue}{blau}]:
 \begin{gather*}
     0,000199 x^2 -0,007889 x + 0,190977\\
-    M_{an}(U_N=400V)=28\ Nm
+    M_{an}(U_N=400V)=28,83\ Nm
 \end{gather*}
 
 \vspace{-7ex}
@@ -116,13 +127,13 @@ Und die quadratische Polynomfunktion $M_{an}(U)$ [\textcolor{blue}{blau}]:
 Der lineare Verlauf in Abb.\ref{fig:Kippmoment}, $M_{\textit{Kipp}}(U)$ [\textcolor{red}{rot}]:
 \begin{gather*}
     0,1863 x - 0,1431\\
-    M_{Kipp}(U_N=400V)=29 \ Nm
+    M_{Kipp}(U_N=400^2V^2)=29,67 \ Nm
 \end{gather*}
 
 Und die quadratische Polynomfunktion $M_{\textit{Kipp}}(U)$ [\textcolor{blue}{blau}]:
 \begin{gather*}
     0,000198 x^2 - 0,0024495 x -0,035842\\
-    M_{Kipp}(U_N=400V)=30\ Nm
+    M_{Kipp}(U_N=400V)=30,6\ Nm
 \end{gather*}
 
 
@@ -164,14 +175,12 @@ Aus der Kurzschlussmessung in 4.2.1 wird der Kurzschlusswiderstand $R_k$ mit:
 \end{equation}
 
 \begin{table}[htbp]
-    \normalsize
-    \def\arraystretch{1.5}
     \begin{tabularx}{\columnwidth}{XXXXX}
-        \hline
+        \toprule
         $I_1[A]$ & $P_1[W]$ & $U[V]$ & $G[g]$ & $M_{an}[Nm]$ \\
-        \hline\hline
+        \midrule
         4,2      & 392      & 113    & 464    & 1,82074      \\
-        \hline
+        \bottomrule
     \end{tabularx}
     \caption{Kurzschlussmessung 4.2.1}
     \label{tab:Kurzschlussmessung}
@@ -190,7 +199,7 @@ Mit den Werten aus der Tabelle \ref{tab:Kurzschlussmessung} kann $cos\varphi_k$ 
 Mithilfe der Formel \ref{eq:cosphi_solved} kann der Realteil der Strom $I_1$ ermittelt:
 
 \begin{align} \label{eq:Ik_solved_real}
-    \varphi_k                      & = \arccos\left(0,4769\right) = 61,51^\circ             \\
+    \varphi_k                    & = \arccos\left(0,4769\right) = 61,51^\circ             \\
     \Aboxed{\mathfrak{Re}\{I_k\} & = cos\varphi_k \cdot I_k = 0,4769 \cdot 4,2 A = 2A}    \\
     \mathfrak{Im}\{I_k\}         & = sin\varphi_k \cdot I_k = 0,8790 \cdot 4,2 A = 3,69 A
 \end{align}

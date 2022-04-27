@@ -171,7 +171,7 @@ Es gilt:
 Aus der Kurzschlussmessung in 4.2.1 wird der Kurzschlusswiderstand $R_k$ mit:
 
 \begin{equation}
-    \boxed{R_k = \frac{U_k}{\mathfrak{Re}\{I_k\}}}
+    \boxed{R_k = \frac{U_k}{I_k}\cdot cos\varphi_k}
 \end{equation}
 
 \begin{table}[htbp]
@@ -213,20 +213,21 @@ Da die Maschine im Stern geschaltet ist, ergibt sich für die Spannung $U_k$:
 Jetzt kann $R_k$ aus den Formeln \ref{eq:Ik_solved_real} und \ref{eq:Uk_solved} berechnet werden:
 
 \begin{equation} \label{eq:Kurzschlusswiderstand_calc}
-    \boxed{R_k = \frac{65,24\si{V}}{2\si{A}} = \underline{32,62\ \Omega}}
+    \boxed{R_k = \frac{65,24\si{V}}{4,2\si{A}}\cdot cos(61,51^\circ) = \underline{7,409 \Omega}}
 \end{equation}
 
 Die Streureaktanzen $X_{1\sigma}$ und $X_{2\sigma}^\text{\textquotesingle}$ werden mit:
 
 \begin{equation} \label{eq:Streureaktanzen}
-    X_{1\sigma} + X_{2\sigma}^\text{\textquotesingle} = \frac{U_k}{\mathfrak{Im}\{I_k\}}
+    X_{1\sigma} + X_{2\sigma}^\text{\textquotesingle} = \frac{U_k}{I_k}\cdot sin\varphi_k
 \end{equation}
 
 Da $X_{1\sigma} = X_{2\sigma}^\text{\textquotesingle}$ ist, ergibt sich:
 
 \begin{align} \label{eq:Streureaktanzen_solved}
-    \Aboxed{X_{1\sigma} & = X_{2\sigma}^\text{\textquotesingle} = \frac{U_k}{\mathfrak{Im}\{I_k\}}\cdot\frac{1}{2}} \\
-                        & = \frac{65,24\si{V}}{3,69\si{A}}\cdot\frac{1}{2} = 8,84\ \Omega
+    \Aboxed{X_{1\sigma} & = X_{2\sigma}^\text{\textquotesingle} = \frac{U_k}{I_k}\cdot\frac{1}{2}} \\
+                        & = \frac{65,24\si{V}}{3,69\si{A}}\cdot\frac{1}{2}\cdot sin(61,51^\circ)   \\
+                        & =6,826\ \Omega
 \end{align}
 
 \subsubsection{Vergleich zwischen ermittelter und gemessener Kurzschlusswiderstand}

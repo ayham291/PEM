@@ -150,16 +150,16 @@ folgende Beziehnung: \[ M = \textit{konst.} \cdot U \]
 
 Umrechnen der gemessenen Widerstandswerte auf die Bezugstemperatur $T=75^\circ$C :
 \begin{align*}
-    R_{1_{75}} & = R_{1_{20}}\frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+25^\circ\text{C}}         \\
-               & = 2,32\ \Omega\cdot \frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+25^\circ\text{C}} \\
+    R_{1_{75}} & = R_{1_{20}}\frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+20^\circ\text{C}}         \\
+               & = 2,32\ \Omega\cdot \frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+20^\circ\text{C}} \\
                & = 2,820\ \Omega
 \end{align*}
 
 Berechnen des Läuferwiderstands mithilfe der Übersetzungsverhältnis:
 \begin{align*}
     R_2^\text{\textquotesingle}        & = \ddot{u}^2\cdot R_2 = 4,7^2 \cdot 216\si{m\Omega}   = 4,77 \Omega                             \\
-    R_{2_{75}}^\text{\textquotesingle} & = R_{2_{20}}\frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+25^\circ\text{C}}         \\
-                                       & = 4,77\ \Omega\cdot \frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+25^\circ\text{C}} \\
+    R_{2_{75}}^\text{\textquotesingle} & = R_{2_{20}}\frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+20^\circ\text{C}}         \\
+                                       & = 4,77\ \Omega\cdot \frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+20^\circ\text{C}} \\
                                        & = 5,8\ \Omega
 \end{align*}
 
@@ -217,7 +217,7 @@ Die Streureaktanzen $X_{1\sigma}$ und $X_{2\sigma}^\text{\textquotesingle}$ werd
 Da $X_{1\sigma} = X_{2\sigma}^\text{\textquotesingle}$ ist, ergibt sich:
 
 \begin{align} \label{eq:Streureaktanzen_solved}
-    \Aboxed{X_{1\sigma} & = X_{2\sigma}^\text{\textquotesingle} = \frac{U_k}{I_k}\cdot\frac{1}{2}} \\
+    \Aboxed{X_{1\sigma} & = X_{2\sigma}^\text{\textquotesingle} = \frac{U_k}{I_k}\cdot\frac{1}{2}\cdot sin\varphi_k} \\
                         & = \frac{65,24\si{V}}{3,69\si{A}}\cdot\frac{1}{2}\cdot sin(61,51^\circ)   \\
                         & =6,826\ \Omega
 \end{align}

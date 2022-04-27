@@ -196,14 +196,6 @@ Mit den Werten aus der Tabelle \ref{tab:Kurzschlussmessung} kann $cos\varphi_k$ 
     cos\varphi_k = \frac{392 \si{W}}{\sqrt{3} \cdot 4,2 \si{A} \cdot 113 \si{V}} = 0,4769
 \end{equation}
 
-Mithilfe der Formel \ref{eq:cosphi_solved} kann der Realteil der Strom $I_1$ ermittelt:
-
-\begin{align} \label{eq:Ik_solved_real}
-    \varphi_k                    & = \arccos\left(0,4769\right) = 61,51^\circ                       \\
-    \Aboxed{\mathfrak{Re}\{I_k\} & = cos\varphi_k \cdot I_k = 0,4769 \cdot 4,2 \si{A} = 2\si{A}}    \\
-    \mathfrak{Im}\{I_k\}         & = sin\varphi_k \cdot I_k = 0,8790 \cdot 4,2 \si{A} = 3,69 \si{A}
-\end{align}
-
 Da die Maschine im Stern geschaltet ist, ergibt sich für die Spannung $U_k$:
 
 \begin{equation} \label{eq:Uk_solved}
@@ -232,10 +224,15 @@ Da $X_{1\sigma} = X_{2\sigma}^\text{\textquotesingle}$ ist, ergibt sich:
 
 \subsubsection{Vergleich zwischen ermittelter und gemessener Kurzschlusswiderstand}
 
-Der gemessene Widerstandswert (Formel \ref{eq:Kurzschlusswiderstand_gemessen}),
-ist im Vergleich zudem rechnerisch ermittelter Wert (Formel \ref{eq:Kurzschlusswiderstand_calc}) um den Faktor 4 größer.
+Die Werte der Widerstände liegen nah beieinander. Der kleine Differenz kann
+durch Messunsicherheiten begründet werden (Analoge Messgeräte).
 
-Eine mögliche Erklärung wäre, dass beim Kurzschlussversuch die Temperatur der
-Asynchronmaschine sehr schnell angestiegen ist und damit auch der Widerstandswert.
+\section{Trennung von Eisen- und Reibungsverlusten}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\columnwidth]{./trennung_eisen_reib.pdf}
+    \caption{Trennung von Eisen- und Reibungsverlusten}
+    \label{fig:trennung_von_eisen_reib}
+\end{figure}
 
 \end{document}

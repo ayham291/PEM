@@ -2,3 +2,8 @@ ASM_ESB_Parameterbestimmung.pdf
 PEM_Versuch_ASM_1600SS.pdf
 .ipynb_checkpoints/
 .ipynb_checkpoints/*
+*out
+*aux
+*syntax*
+*fdb*
+*fls*

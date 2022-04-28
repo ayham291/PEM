@@ -226,10 +226,70 @@ Da $X_{1\sigma} = X_{2\sigma}^\prime$ ist, ergibt sich:
 
 \subsubsection{Vergleich zwischen ermittelter und gemessener Kurzschlusswiderstand}
 
-Die Werte der Widerstände liegen nah beieinander. Der kleine Differenz kann
-durch Messunsicherheiten begründet werden (Analoge Messgeräte).
+Die Werte des berechnete Kurzschlusswiderstands (2) haben eine Abweichung von ca. 15 \% zu dem gemessenen Widerstand (7). Diese Differenz ist zu einem großen Teil auf die gewählte Referenztemperatur von 75°C zurück zuführen. Bei einer zügig durchgeführten Messung ist die Wärmeentwicklung der Maschine geringer. Nimmt man also einen geringeren Temperaturanstieg wie etwa 60°C an kommt man dem gemessenen Wert deutlich Näher.
+
+\begin{equation}
+    R_{2_{60}}^\prime = R_{2_{20}}^\prime \cdot \dfrac{60°C + 235°C}{20°C + 235°C}
+\end{equation}
+
+\begin{equation}
+    R_{2_{60}}^\prime = 4,77 \Omega \cdot \dfrac{60°C + 235°C}{20°C + 235°C} = 4,77 \Omega
+\end{equation}
+
+
+\begin{equation}
+    aus (2)  \boxed{R_{k} = R_{1} + R_{2_{60}}^\prime = 2,82 \Omega + 4,77 \Omega = 7,59 \Omega}
+\end{equation}
+
 
 \subsection{Parameterbestimmung aufgrund der Leerlaufmessung}
+Bei dem folgenden Versuch ist Läuferseitig ein Leerlauf und somit kein Läuferstrom $I_{2}$ zu messen. Der fließende Strom besteht ausschließlich aus dem Ständerstrom $I_{1}$ bzw. dem Magnetisierungsstrom $I_{0}$.
+Der verwendete Hebelarm aus den letzten Messungen wird entfernt, der Läufer wird mit kurzen Leitungen kurzgeschlossen.
+Die verwendeten Werte werden Tabelle IV entnommen. \\
+Die gemessene Spannung wird auf die Strangspannung umgerechnet. Anschließende wird über eine Masche der Spannungabfall $U_{h, Fe}$ berechnet.
+
+\begin{equation}
+    U_{Strang} = \dfrac{U}{ \sqrt{3} } = 230,94V
+\end{equation}
+
+\begin{align*}
+    U_{h, Fe} & = U_{Strang} - U_{1} = U_{Strang} - R_{1} \cdot I_{0} \\
+              & = 230,94V - 2,32 \Omega \cdot 2,75A = 224,56V
+\end{align*}
+
+
+\begin{equation}
+    \varphi_{0} = arcos( \dfrac{P_{0} - P_{Cu1} }{3 \cdot U_{Strang} \cdot I_{0} }) = 84,35
+\end{equation}
+
+
+\begin{align*}
+    I_{Fe+Reib} & = I_{0} \cdot cos( \varphi ) = 0,27A \\
+    I_{m}       & = I_{0} \cdot sin( \varphi ) = 2,7367A
+%    Z_{h, Fe} = \dfrac{ U_{h, Fe} }{ I_{0} } = ( \frac{1}{X_{h}} + \frac{1}{R_{Fe}} )^{-1} = 81,66 \Omega
+\end{align*}
+
+\begin{equation}
+    R_{Fe+Reib} = \dfrac{ U_{h, Fe} }{ I_{Fe+Reib} } = 831,7 \Omega
+%    \boxed{ R = Z_{h, Fe} \cdot ( \frac{1}{cos( \varphi) } +1 ) = 729,606 \Omega }
+\end{equation}
+
+\begin{equation}
+    X_{h} = \dfrac{ U_{h, Fe} }{ I_{m} } = 82,06 \Omega
+    %\boxed{ X_{h} = 91,95 \Omega }
+\end{equation}
+
+\subsubsection{Verhältniss aus Haupt- und Streureaktanz}
+
+mit $X_{ \sigma } =  X_{1, \sigma } + X_{2, \sigma }^\prime$
+
+\begin{equation}
+    \dfrac{ X_{h}}{X_{ \sigma }} = \dfrac{ 82,06 \Omega }{ 13,652 \Omega } = 6,01
+    %\dfrac{ X_{h}}{X_{ \sigma }} = \dfrac{ 91,95 \Omega }{ 13,652 \Omega } = 6,735
+\end{equation}
+
+Die Hauptreaktanz ist ca. 6 mal größer als die Streureaktanz.
+
 \subsubsection{Vollständige Ersatzschaltbild [ESB]}
 
 \begin{figure}[htbp]

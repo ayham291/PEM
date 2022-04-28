@@ -96,10 +96,11 @@ Aber in der unteren Hälfte der Abbildungen wird das Drehmoment der ASM direkt
 über die Spannung $U_1$ dargestellt und mit einer quadratischen Polynomfunktion
 extrapoliert.
 
-\vspace{-7ex}
+\input{./tables/anlaufmoment.tex}
+
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\columnwidth]{./anlaufmoment.pdf}
+    \includegraphics[width=\columnwidth]{./figures/anlaufmoment.pdf}
     \caption{Anlaufmoment}
     \label{fig:Anlaufmoment}
 \end{figure}
@@ -116,10 +117,11 @@ Und die quadratische Polynomfunktion $M_{an}(U)$ [\textcolor{blue}{blau}]:
     M_{an}(U_N=400V)=28,83\ \si{Nm}
 \end{gather*}
 
-\vspace{-7ex}
+\input{./tables/kippmoment}
+
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\columnwidth]{./kippmoment.pdf}
+    \includegraphics[width=\columnwidth]{./figures/kippmoment.pdf}
     \caption{Kippmoment}
     \label{fig:Kippmoment}
 \end{figure}
@@ -157,20 +159,20 @@ Umrechnen der gemessenen Widerstandswerte auf die Bezugstemperatur $T=75^\circ$C
 
 Berechnen des Läuferwiderstands mithilfe der Übersetzungsverhältnis:
 \begin{align*}
-    R_2^\text{\textquotesingle}        & = \ddot{u}^2\cdot R_2 = 4,7^2 \cdot 216\si{m\Omega}   = 4,77 \Omega                             \\
-    R_{2_{75}}^\text{\textquotesingle} & = R_{2_{20}}\frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+20^\circ\text{C}}         \\
+    R_2^\prime        & = \ddot{u}^2\cdot R_2 = 4,7^2 \cdot 216\si{m\Omega}   = 4,77 \Omega                             \\
+    R_{2_{75}}^\prime & = R_{2_{20}}\frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+20^\circ\text{C}}         \\
                                        & = 4,77\ \Omega\cdot \frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+20^\circ\text{C}} \\
                                        & = 5,8\ \Omega
 \end{align*}
 
 Es gilt:
 \begin{equation} \label{eq:Kurzschlusswiderstand_gemessen}
-    \boxed{R_k = R_1 + R_2^\text{\textquotesingle} = 2,820\ \Omega + 5,8\ \Omega = 8,62\ \Omega}
+    \boxed{R_k = R_1 + R_2^\prime = 2,820\ \Omega + 5,8\ \Omega = 8,62\ \Omega}
 \end{equation}
 
 Aus der Kurzschlussmessung in 4.2.1 wird der Kurzschlusswiderstand $R_k$ mit:
 
-\begin{equation}
+\begin{equation} \label{eq:Kurzschlusswiderstand}
     \boxed{R_k = \frac{U_k}{I_k}\cdot cos\varphi_k}
 \end{equation}
 
@@ -202,22 +204,22 @@ Da die Maschine im Stern geschaltet ist, ergibt sich für die Spannung $U_k$:
     \boxed{U_k = \frac{U}{\sqrt{3}}} = \frac{113 \si{V}}{\sqrt{3}} = 65,24 \si{V}
 \end{equation}
 
-Jetzt kann $R_k$ aus den Formeln \ref{eq:Ik_solved_real} und \ref{eq:Uk_solved} berechnet werden:
+In der Formel \ref{eq:Kurzschlusswiderstand} einsetzen:
 
 \begin{equation} \label{eq:Kurzschlusswiderstand_calc}
     \boxed{R_k = \frac{65,24\si{V}}{4,2\si{A}}\cdot cos(61,51^\circ) = \underline{7,409 \Omega}}
 \end{equation}
 
-Die Streureaktanzen $X_{1\sigma}$ und $X_{2\sigma}^\text{\textquotesingle}$ werden mit:
+Die Streureaktanzen $X_{1\sigma}$ und $X_{2\sigma}^\prime$ werden mit:
 
 \begin{equation} \label{eq:Streureaktanzen}
-    X_{1\sigma} + X_{2\sigma}^\text{\textquotesingle} = \frac{U_k}{I_k}\cdot sin\varphi_k
+    X_{1\sigma} + X_{2\sigma}^\prime = \frac{U_k}{I_k}\cdot sin\varphi_k
 \end{equation}
 
-Da $X_{1\sigma} = X_{2\sigma}^\text{\textquotesingle}$ ist, ergibt sich:
+Da $X_{1\sigma} = X_{2\sigma}^\prime$ ist, ergibt sich:
 
 \begin{align} \label{eq:Streureaktanzen_solved}
-    \Aboxed{X_{1\sigma} & = X_{2\sigma}^\text{\textquotesingle} = \frac{U_k}{I_k}\cdot\frac{1}{2}\cdot sin\varphi_k} \\
+    \Aboxed{X_{1\sigma} & = X_{2\sigma}^\prime = \frac{U_k}{I_k}\cdot\frac{1}{2}\cdot sin\varphi_k} \\
                         & = \frac{65,24\si{V}}{3,69\si{A}}\cdot\frac{1}{2}\cdot sin(61,51^\circ)   \\
                         & =6,826\ \Omega
 \end{align}
@@ -227,12 +229,23 @@ Da $X_{1\sigma} = X_{2\sigma}^\text{\textquotesingle}$ ist, ergibt sich:
 Die Werte der Widerstände liegen nah beieinander. Der kleine Differenz kann
 durch Messunsicherheiten begründet werden (Analoge Messgeräte).
 
+\subsection{Parameterbestimmung aufgrund der Leerlaufmessung}
+\subsubsection{Vollständige Ersatzschaltbild [ESB]}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\columnwidth]{./figures/Vollstaendiges_ESB.jpg}
+    \caption{Vollständige Ersatzschaltbild}
+    \label{fig:ESB_Vollstaendig}
+\end{figure}
+
 \section{Trennung von Eisen- und Reibungsverlusten}
 
-\vspace{-4ex}
+\input{./tables/trennung_eisen_reib.tex}
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\columnwidth]{./trennung_eisen_reib.pdf}
+    \includegraphics[width=\columnwidth]{./figures/trennung_eisen_reib.pdf}
     \caption{Trennung von Eisen- und Reibungsverlusten}
     \label{fig:trennung_von_eisen_reib}
 \end{figure}

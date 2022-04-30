@@ -160,9 +160,9 @@ Umrechnen der gemessenen Widerstandswerte auf die Bezugstemperatur $T=75^\circ$C
 Berechnen des Läuferwiderstands mithilfe der Übersetzungsverhältnis:
 \begin{align*}
     R_2^\prime        & = \ddot{u}^2\cdot R_2 = 4,7^2 \cdot 216\si{m\Omega}   = 4,77 \Omega                             \\
-    R_{2_{75}}^\prime & = R_{2_{20}}\frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+20^\circ\text{C}}         \\
-                                       & = 4,77\ \Omega\cdot \frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+20^\circ\text{C}} \\
-                                       & = 5,8\ \Omega
+    R_{2_{75}}^\prime & = R_{2_{20}}\frac{235^\circ\si{C}+75^\circ\si{C}}{235^\circ\si{C}+20^\circ\si{C}}         \\
+                      & = 4,77\ \Omega\cdot \frac{235^\circ\si{C}+75^\circ\si{C}}{235^\circ\si{C}+20^\circ\si{C}} \\
+                      & = 5,8\ \Omega
 \end{align*}
 
 Es gilt:
@@ -229,11 +229,11 @@ Da $X_{1\sigma} = X_{2\sigma}^\prime$ ist, ergibt sich:
 Die Werte des berechnete Kurzschlusswiderstands (\ref{eq:Kurzschlusswiderstand_gemessen}) haben eine Abweichung von ca. 15 \% zu dem gemessenen Widerstand (\ref{eq:Kurzschlusswiderstand_calc}). Diese Differenz ist zu einem großen Teil auf die gewählte Referenztemperatur von 75°C zurück zuführen. Bei einer zügig durchgeführten Messung ist die Wärmeentwicklung der Maschine geringer. Nimmt man also einen geringeren Temperaturanstieg wie etwa 60°C an kommt man dem gemessenen Wert deutlich Näher.
 
 \begin{equation}
-    R_{2_{60}}^\prime = R_{2_{20}}^\prime \cdot \dfrac{60°C + 235°C}{20°C + 235°C}
+    R_{2_{60}}^\prime = R_{2_{20}}^\prime \cdot \dfrac{60^\circ \si{C} + 235^\circ \si{C}}{20^\circ \si{C} + 235^\circ \si{C}}
 \end{equation}
 
 \begin{equation}
-    R_{2_{60}}^\prime = 4,77 \Omega \cdot \dfrac{60°C + 235°C}{20°C + 235°C} = 4,77 \Omega
+    R_{2_{60}}^\prime = 4,77 \Omega \cdot \dfrac{60^\circ \si{C} + 235^\circ \si{C}}{20^\circ \si{C} + 235^\circ \si{C}} = 4,77 \Omega
 \end{equation}
 
 aus (\ref{eq:Kurzschlusswiderstand_gemessen}):
@@ -249,24 +249,24 @@ Die verwendeten Werte werden Tabelle IV entnommen. \\
 Die gemessene Spannung wird auf die Strangspannung umgerechnet. Anschließende wird über eine Masche der Spannungabfall $U_{h, Fe}$ berechnet.
 
 \begin{equation}
-    U_{Strang} = \dfrac{U}{ \sqrt{3} } = 230,94V
+    U_{Strang} = \dfrac{U}{ \sqrt{3} } = 230,94\si{V}
 \end{equation}
 
 \begin{align*}
-    U_{h, Fe} & = U_{Strang} - U_{1} = U_{Strang} - R_{1} \cdot I_{0} \\
-              & = 230,94V - 2,32 \Omega \cdot 2,75A = 224,56V
+    U_{h, Fe} & = U_{Strang} - U_{1} = U_{Strang} - R_{1} \cdot I_{0}        \\
+              & = 230,94\si{V} - 2,32 \Omega \cdot 2,75\si{A} = 224,56\si{V}
 \end{align*}
 
 
 \begin{equation}
-    \varphi_{0} = arcos( \dfrac{P_{0} - P_{Cu1} }{3 \cdot U_{Strang} \cdot I_{0} }) = 84,35
+    \varphi_{0} = arcos\left( \dfrac{P_{0} - P_{Cu1} }{3 \cdot U_{Strang} \cdot I_{0} }\right) = 84,35^\circ
 \end{equation}
 
 
 \begin{align*}
-    I_{Fe+Reib} & = I_{0} \cdot cos( \varphi ) = 0,27A \\
-    I_{m}       & = I_{0} \cdot sin( \varphi ) = 2,7367A
-%    Z_{h, Fe} = \dfrac{ U_{h, Fe} }{ I_{0} } = ( \frac{1}{X_{h}} + \frac{1}{R_{Fe}} )^{-1} = 81,66 \Omega
+    I_{Fe+Reib} & = I_{0} \cdot cos( \varphi ) = 0,27\si{A}   \\
+    I_{m}       & = I_{0} \cdot sin( \varphi ) = 2,7367\si{A}
+    %    Z_{h, Fe} = \dfrac{ U_{h, Fe} }{ I_{0} } = ( \frac{1}{X_{h}} + \frac{1}{R_{Fe}} )^{-1} = 81,66 \Omega
 \end{align*}
 
 \begin{equation}

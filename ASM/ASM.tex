@@ -327,17 +327,22 @@ Ersatzschaltbildes dar.
     \label{fig:ESB_Vollstaendig}
 \end{figure}
 
-\newpage
 \section{Trennung von Eisen- und Reibungsverlusten}
 
-Die gemessenen Leerlaufleistungen P_{0} beinhalten Cu}, P_{Reib} und P_{Fe}. Um die Eisen- 
-und Reibungsverluste zu trennen, werden als Erstes die Kupferverluste P_{Cu} abgezogen.\\
-P_{0} - P_{Cu} = P_{Reib+Fe} 
+Die gemessenen Leerlaufleistungen $P_{0}$ beinhalten $P_{Cu}$, $P_{Reib}$
+und $P_{Fe}$. Um die Eisen- und Reibungsverluste zu trennen, werden als Erstes
+die Kupferverluste$ P_{Cu}$ abgezogen.
+
+\begin{equation}
+    P_{0} - P_{Cu} = P_{Reib+Fe}
+    \label{eq:P_reib_fe}
+\end{equation}
 
 \input{./tables/trennung_eisen_reib.tex}
 
-Zur graphischen Ermittlung von P_{Reib} werden die Messwerte für P_{Reib+Fe} nun graphisch als 
-Funktion der quatratischen Spannung U² dargestellt.
+Zur graphischen Ermittlung von $P_{Reib}$ werden die Messwerte für
+$P_{Reib+Fe}$ nun graphisch als Funktion der quatratischen Spannung $U^2$
+dargestellt.
 
 \begin{figure}[htbp]
     \centering
@@ -346,27 +351,30 @@ Funktion der quatratischen Spannung U² dargestellt.
     \label{fig:trennung_von_eisen_reib}
 \end{figure}
 
-Die Messerwerte bilden eine Gerade, deren Ordinatenabschnitt P_{Reib} darstellt.\\
-P_{Reib} = 24,38 W\\
-Zur Berechnung von R_{Reib} wird die Spannung, die ueber R_{1} abfaellt zur Vereinfachung vernachlaessigt.
-\begin{equation}
-    R_{Reib} = \dfrac{3*U_{1N}^{2}}{ P_{Reib} } = 
-\end{equation}
+Die Messerwerte bilden eine Gerade, deren Ordinatenabschnitt $P_{Reib}$
+darstellt. $P_{Reib} = 24,38 \si{W}$
 
-Zur Bestimmung von R_{Fe} wird P_{Fe} an der Stelle U_{1N}^{2} abglesen.\\
-P_{Fe} = 193,07 W\\
+Zur Berechnung von $R_{Reib}$ wird die Spannung, die ueber $R_{1}$ abfaellt zur
+Vereinfachung vernachlaessigt.
 
 \begin{equation}
-    R_{Fe} = \dfrac{3*U_{1N}^{2}}{ P_{Fe} } = 
+    R_{Reib} = \dfrac{3\cdot U_{1N}^{2}}{ P_{Reib} } =
 \end{equation}
 
+Zur Bestimmung von $R_{Fe}$ wird $P_{Fe}$ an der Stelle $U_{1N}^{2}$ abglesen.
+$P_{Fe} = 193,07 \si{W}$
 
-\subsubsection{Parallelschaltung von R_{Reib} und R_{Fe}}
 \begin{equation}
-R_{Reib}||R_{Fe} = \dfrac{ R_{Reib} * R_{Fe}}{R_{Reib} + R_{Fe}} = 
+    R_{Fe} = \dfrac{3\cdot U_{1N}^{2}}{ P_{Fe} } =
 \end{equation}
 
-\subsubsection{Vergleich der Parallelschaltung von R_{Reib} und R_{Fe} mit R_{Reib+Fe} aus 5.3.2}
+
+\subsubsection{Parallelschaltung von $R_{Reib}$ und $R_{Fe}$}
+\begin{equation}
+    R_{Reib}||R_{Fe} = \dfrac{ R_{Reib} \cdot R_{Fe}}{R_{Reib} + R_{Fe}} =
+\end{equation}
+
+\subsubsection{Vergleich der Parallelschaltung von $R_{Reib}$ und $R_{Fe}$ mit $R_{Reib+Fe}$ aus 5.3.2}
 
 \dots
 

@@ -311,6 +311,7 @@ Die Hauptreaktanz ist ca. 6 mal größer als die Streureaktanz.
     \label{fig:ESB_Vollstaendig}
 \end{figure}
 
+\newpage
 \section{Trennung von Eisen- und Reibungsverlusten}
 
 \input{./tables/trennung_eisen_reib.tex}
@@ -319,6 +320,45 @@ Die Hauptreaktanz ist ca. 6 mal größer als die Streureaktanz.
     \centering
     \includegraphics[width=\columnwidth]{./figures/trennung_eisen_reib.pdf}
     \caption{Trennung von Eisen- und Reibungsverlusten}
+    \label{fig:trennung_von_eisen_reib}
+\end{figure}
+
+\section{$M/n$ Kennlinie}
+
+aus (\ref{eq:Streureaktanzen_solved}), (\ref{eq:R_2^prime}) und (\ref{eq:R1_75})
+
+\smallskip
+Mit $R_1 = 2,82\Omega$:
+\begin{equation} \label{eq:s_k-mit-R_1}
+    s_k = \frac{R_2^{\prime}}{\sqrt{R_{1}^{2} + X_{\sigma}^{2}}} = \frac{5,80\Omega}{\sqrt{2,82^2+13,652^2}\Omega} = 0,416
+\end{equation}
+
+\begin{align}
+    M_{k} & = \frac{U_{1}^{2}}{4 \pi n_{1} \left(R_{1} + \sqrt{R_{1}^{2} + X_{\sigma}^{2}}\right)}           \\
+          & = \frac{400\si{V}^{2}}{4 \pi \cdot 25 \si{sec^{-1}} \cdot (2,82 + \sqrt{2,82^2+13,652^2})\Omega} \\
+          & = 31,653 \si{Nm}
+    \label{eq:M_k-mit-R_1}
+\end{align}
+
+\smallskip
+Mit $R_1 = 0\Omega$:
+\begin{equation} \label{eq:s_k-naehrung}
+    s_k \approx \frac{R_2^{\prime}}{X_{\sigma}} = \frac{5,80\Omega}{13,652\Omega} = 0,425
+\end{equation}
+
+\begin{align}
+    M_{k} & \approx \frac{U_{1}^{2}}{4 \pi X_{\sigma} n_{1}} \approx \frac{400\si{V}^{2}}{4 \pi\cdot 13,652 \Omega \cdot 25 \si{sec^{-1}}} \\
+          & \approx 37,306 \si{Nm}
+    \label{eq:M_k-mit-R_1}
+\end{align}
+
+\input{./tables/klossche_gleichung.tex}
+\input{./tables/kippmoment_im_stillstand.tex}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\columnwidth]{./figures/m_n-kennlinie.pdf}
+    \caption{$M/n$ Kennlinie}
     \label{fig:trennung_von_eisen_reib}
 \end{figure}
 

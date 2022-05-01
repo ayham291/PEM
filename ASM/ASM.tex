@@ -151,19 +151,21 @@ folgende Beziehnung: \[ M = \textit{konst.} \cdot U \]
 \subsection{Parameterbestimmung aufgrund der Kurzschlussmessung}
 
 Umrechnen der gemessenen Widerstandswerte auf die Bezugstemperatur $T=75^\circ$C :
-\begin{align*}
+\begin{align}
     R_{1_{75}} & = R_{1_{20}}\frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+20^\circ\text{C}}         \\
                & = 2,32\ \Omega\cdot \frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+20^\circ\text{C}} \\
+    \label{eq:R1_75}
                & = 2,820\ \Omega
-\end{align*}
+\end{align}
 
 Berechnen des Läuferwiderstands mithilfe der Übersetzungsverhältnis:
-\begin{align*}
-    R_2^\prime        & = \ddot{u}^2\cdot R_2 = 4,7^2 \cdot 216\si{m\Omega}   = 4,77 \Omega                             \\
+\begin{align}
+    R_2^\prime        & = \ddot{u}^2\cdot R_2 = 4,7^2 \cdot 216\si{m\Omega}   = 4,77 \Omega                       \\
     R_{2_{75}}^\prime & = R_{2_{20}}\frac{235^\circ\si{C}+75^\circ\si{C}}{235^\circ\si{C}+20^\circ\si{C}}         \\
                       & = 4,77\ \Omega\cdot \frac{235^\circ\si{C}+75^\circ\si{C}}{235^\circ\si{C}+20^\circ\si{C}} \\
+    \label{eq:R_2^prime}
                       & = 5,8\ \Omega
-\end{align*}
+\end{align}
 
 Es gilt:
 \begin{equation} \label{eq:Kurzschlusswiderstand_gemessen}

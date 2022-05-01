@@ -250,6 +250,7 @@ aus (\ref{eq:Kurzschlusswiderstand_gemessen}):
 
 
 \subsection{Parameterbestimmung aufgrund der Leerlaufmessung}
+\subsubsection{Maschinenparameter $X_h$ und $R_{Fe+Reib}$ aufgrund der Leerlaufmessung}
 Bei dem folgenden Versuch ist Läuferseitig ein Leerlauf und somit kein
 Läuferstrom $I_{2}$ zu messen. Der fließende Strom besteht ausschließlich aus
 dem Ständerstrom $I_{1}$ bzw. dem Magnetisierungsstrom $I_{0}$.
@@ -303,6 +304,10 @@ mit $X_{ \sigma } =  X_{1, \sigma } + X_{2, \sigma }^\prime$
 Die Hauptreaktanz ist ca. 6 mal größer als die Streureaktanz.
 
 \subsubsection{Vollständige Ersatzschaltbild [ESB]}
+Das ESB beschreibt immer einen Strang der Maschine, so dass die Verschaltung
+(Stern- oder Dreieck) bezüglich der Messgrößen Strom und Spannung zu
+berücksichtigen ist. $U_1$ und $I_1$ stellen die Stranggrößen des
+Ersatzschaltbildes dar.
 
 \begin{figure}[htbp]
     \centering
@@ -316,7 +321,7 @@ Die Hauptreaktanz ist ca. 6 mal größer als die Streureaktanz.
 
 \input{./tables/trennung_eisen_reib.tex}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\columnwidth]{./figures/trennung_eisen_reib.pdf}
     \caption{Trennung von Eisen- und Reibungsverlusten}

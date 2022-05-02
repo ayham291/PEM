@@ -72,18 +72,22 @@
     In diesem Versuch soll eine Asynchronmaschine mit Schleifringläufer genauer
     untersucht werden. Die Versuchsmaschine wird mithilfe einer
     Käfigläufer-Asynchronmaschine belastet, deren Drehzahl mithilfe eines
-    Frequenzumrichters gesteuert werden kann. \\
-    Zur Bestimmung der Ersatzschaltbild-Parameter werden ein Kurzschluss- und ein
-    Leerlaufversuch durchgeführt. Der Kurzschlussversuch dient der Bestimmung der Parameter im
-    Längszweig, des komplexen Anlaufstromes sowie des Anzugmomentes. Mithilfe
-    des Leerlaufversuches lassen sich die Parameter im Querzweig und der
-    komplexe Leerlaufstrom bestimmen. Dazu wird die Ständerspannung verändert.\\
+    Frequenzumrichters gesteuert werden kann.
+
+    Zur Bestimmung der Ersatzschaltbild-Parameter werden ein Kurzschluss- und
+    ein Leerlaufversuch durchgeführt. Der Kurzschlussversuch dient der
+    Bestimmung der Parameter im Längszweig, des komplexen Anlaufstromes sowie
+    des Anzugmomentes. Mithilfe des Leerlaufversuches lassen sich die Parameter
+    im Querzweig und der komplexe Leerlaufstrom bestimmen. Dazu wird die
+    Ständerspannung verändert.
+
     Im nächsten Versuchsteil wird die Belastung der ASM und die synchrone
     Drehzahl untersucht. Die Messungen werden im Betriebsbereich um die
     synchrone Drehzahl aufgenommen, damit die Belastung der Maschine im
-    motorischen und generatorischen Betrieb gemessen werden kann.\\
-    Im letzten Versuchsteil wird die im Schleifringläufer induzierte Spannung in
-    Abhängikeit zur Drehzahl gemessen.
+    motorischen und generatorischen Betrieb gemessen werden kann.
+
+    Im letzten Versuchsteil wird die im Schleifringläufer induzierte Spannung
+    in Abhängikeit zur Drehzahl gemessen.
 
 \end{abstract}
 
@@ -151,21 +155,25 @@ Und die quadratische Polynomfunktion $M_{\textit{Kipp}}(U)$ [\textcolor{blue}{bl
     M_{Kipp}(U_N=400V)=30,6\ \si{Nm}
 \end{gather*}
 
-Es gibt eine Abweichung von wenigen Prozent zwischen der linearisierten und quadratischen Extrapolation. 
-Durch die quadratische Extrapolation bekommen Messfehler einen stärkeren Einfluss.
-Eine quadratische Extrapolation eignet sich trotzdem um eine anschauliche Gerade zu bilden.
+Es gibt eine Abweichung von wenigen Prozent zwischen der linearisierten und
+quadratischen Extrapolation. Durch die quadratische Extrapolation bekommen
+Messfehler einen stärkeren Einfluss. Eine quadratische Extrapolation eignet
+sich trotzdem um eine anschauliche Gerade zu bilden.
 
 
 \subsection{Zusammenhang zwischen Drehmoment und Spannung}
 
 Bei zunehmender Spannung $U_1$ steigt das Drehmoment M quadratisch an. Das
-Drehmoment ist direkt proportional zu $U^2$ ($M \sim U^2$) und darauf ergibt sich
-folgende Beziehnung: \[ M = \textit{konst.} \cdot U^{2} \]
+Drehmoment ist direkt proportional zu $U^2$ ($M \sim U^2$) und darauf ergibt
+sich folgende Beziehnung: \[ M = \textit{konst.} \cdot U^{2} \]
 
 
 \section{Bestimmung der Ersatzschaltbildparameter}
 \subsection{Parameterbestimmung aufgrund der Kurzschlussmessung}
-BErechnung des gemessenen Ständerwiderstands $R_{1}$ um die Maschinenerwärmung auf $T=75^\circ$C zu berücksichtigen:
+
+Berechnung des gemessenen Ständerwiderstands $R_{1}$ um die Maschinenerwärmung
+auf $T=75^\circ$C zu berücksichtigen:
+
 \begin{align}
     R_{1_{75}} & = R_{1_{20}}\frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+20^\circ\text{C}}         \\
                & = 2,32\ \Omega\cdot \frac{235^\circ\si{C}+75^\circ\text{C}}{235^\circ\text{C}+20^\circ\text{C}} \\
@@ -245,12 +253,12 @@ Da $X_{1\sigma} = X_{2\sigma}^\prime$ ist, ergibt sich:
 \subsubsection{Vergleich zwischen ermitteltem und gemessem Kurzschlusswiderstand}
 
 Die Werte des berechnete Kurzschlusswiderstands
-(\ref{eq:Kurzschlusswiderstand_gemessen}) haben eine Abweichung von ca. 15 \% zu
-dem gemessenen Widerstand (\ref{eq:Kurzschlusswiderstand_calc}). Diese Differenz
-ist zu einem großen Teil auf die gewählte Referenztemperatur von 75°C zurück
-zuführen. Bei einer zügig durchgeführten Messung ist die Wärmeentwicklung der
-Maschine geringer. Nimmt man also einen Temperaturanstieg auf nur
-55°C kommt man dem gemessenen Wert deutlich näher.
+(\ref{eq:Kurzschlusswiderstand_gemessen}) haben eine Abweichung von ca. 15 \%
+zu dem gemessenen Widerstand (\ref{eq:Kurzschlusswiderstand_calc}). Diese
+Differenz ist zu einem großen Teil auf die gewählte Referenztemperatur von 75°C
+zurück zuführen. Bei einer zügig durchgeführten Messung ist die
+Wärmeentwicklung der Maschine geringer. Nimmt man also einen Temperaturanstieg
+auf nur 55°C kommt man dem gemessenen Wert deutlich näher.
 
 \begin{equation}
     R_{2_{55}}^\prime = R_{2_{20}}^\prime \cdot \dfrac{55^\circ \si{C} + 235^\circ \si{C}}{20^\circ \si{C} + 235^\circ \si{C}} = 5,43 \Omega
@@ -268,12 +276,14 @@ aus (\ref{eq:Kurzschlusswiderstand_gemessen}):
 
 \subsection{Parameterbestimmung aufgrund der Leerlaufmessung}
 \subsubsection{Maschinenparameter $X_h$ und $R_{Fe+Reib}$ aufgrund der Leerlaufmessung}
+
 Bei dem folgenden Versuch ist Läuferseitig ein Leerlauf und somit kein
 Läuferstrom $I_{2}$ zu messen. Der fließende Strom besteht ausschließlich aus
 dem Ständerstrom $I_{1}$ bzw. dem Leerlaufstrom $I_{0}$.
-Der verwendete Hebelarm aus den letzten Messungen wird entfernt, der Läufer wird
-mit kurzen Leitungen kurzgeschlossen.  Die verwendeten Werte werden Tabelle
-\ref{tab:trennung_eisen_reib} entnommen.
+
+Der verwendete Hebelarm aus den letzten Messungen wird entfernt, der Läufer
+wird mit kurzen Leitungen kurzgeschlossen.  Die verwendeten Werte werden
+Tabelle \ref{tab:trennung_eisen_reib} entnommen.
 
 Die gemessene Spannung wird auf die Strangspannung umgerechnet.
 Anschließende wird über eine Masche der Spannungabfall $U_{h, Fe}$
@@ -322,6 +332,7 @@ mit $X_{ \sigma } =  X_{1, \sigma } + X_{2, \sigma }^\prime$
 Die Hauptreaktanz ist ca. 6 mal größer als die Streureaktanz.
 
 \subsubsection{Vollständige Ersatzschaltbild [ESB]}
+
 Das ESB beschreibt immer einen Strang der Maschine, so dass die Verschaltung
 (Stern- oder Dreieck) bezüglich der Messgrößen Strom und Spannung zu
 berücksichtigen ist. $U_1$ und $I_1$ stellen die Stranggrößen des
@@ -336,9 +347,9 @@ Ersatzschaltbildes dar.
 
 \section{Trennung von Eisen- und Reibungsverlusten}
 
-Die gemessenen Leerlaufleistungen $P_{0}$ beinhalten $P_{Cu}$, $P_{Reib}$
-und $P_{Fe}$. Um die Eisen- und Reibungsverluste zu trennen, werden als Erstes
-die Kupferverluste$ P_{Cu}$ abgezogen.
+Die gemessenen Leerlaufleistungen $P_{0}$ beinhalten $P_{Cu}$, $P_{Reib}$ und
+$P_{Fe}$. Um die Eisen- und Reibungsverluste zu trennen, werden als Erstes die
+Kupferverluste$ P_{Cu}$ abgezogen.
 
 \begin{equation}
     P_{0} - P_{Cu} = P_{Reib+Fe}
@@ -361,7 +372,8 @@ dargestellt.
 Die Messerwerte bilden eine Gerade, deren Ordinatenabschnitt $P_{Reib}$
 darstellt. $P_{Reib} = 24,38 \si{W}$
 
-Zur Berechnung von $R_{Reib}$ wird die Spannung $U_{h, Fe}$ aus {\ref{eq:UhFe}} verwendet
+Zur Berechnung von $R_{Reib}$ wird die Spannung $U_{h, Fe}$ aus {\ref{eq:UhFe}}
+verwendet
 
 \begin{equation}
     R_{Reib} = \dfrac{3\cdot U_{h, Fe}^{2}}{ P_{Reib} } = 6205 \Omega
@@ -384,8 +396,11 @@ $P_{Fe} = 193,07 \si{W}$
 
 \subsubsection{Vergleich der Parallelschaltung von $R_{Reib}$ und $R_{Fe}$ mit $R_{Reib+Fe}$ aus 5.3.2}
 
-Die starke Abweichung von 136 $ \Omega$ zwischen dem über Strom und Spannung berechneten Widerstand $R_{h, Fe}$ und dem über die Leistung berechneten Widerstand lässt sich zum Teil mit dem sehr ungenauen analogen Wattmeter und dem dadurch entstehenden Paralaxenfehler begründen.
-Durch die quadrierung der gemessenen Spannung verstärkt sich zusätzlich der Fehlereinfluss.
+Die starke Abweichung von 136 $ \Omega$ zwischen dem über Strom und Spannung
+berechneten Widerstand $R_{h, Fe}$ und dem über die Leistung berechneten
+Widerstand lässt sich zum Teil mit dem sehr ungenauen analogen Wattmeter und
+dem dadurch entstehenden Paralaxenfehler begründen. Durch die quadrierung der
+gemessenen Spannung verstärkt sich zusätzlich der Fehlereinfluss.
 
 \section{$M/n$ Kennlinie}
 
@@ -419,7 +434,9 @@ Mit $R_1 = 0\Omega$:
 \input{./tables/klossche_gleichung.tex}
 \input{./tables/kippmoment_im_stillstand.tex}
 
-Der eben berechnete Wert hat eine Abweichung von wenigen Prozent, dies lässt sich mit den typischen Messungenauigkeiten begründen. Klar zu sehen ist aber das eine Vernachlässigung von $R_{1}$ zu einem deutlichen Fehler führt.
+Der eben berechnete Wert hat eine Abweichung von wenigen Prozent, dies lässt
+sich mit den typischen Messungenauigkeiten begründen. Klar zu sehen ist aber
+das eine Vernachlässigung von $R_{1}$ zu einem deutlichen Fehler führt.
 
 \begin{figure}[htbp]
     \centering

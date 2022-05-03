@@ -394,7 +394,8 @@ $P_{Fe} = 193,07 \si{W}$
 \end{equation}
 
 
-\subsubsection{Vergleich der Parallelschaltung von $R_{Reib}$ und $R_{Fe}$ mit $R_{Reib+Fe}$ aus 5.3.2}
+\subsubsection{Vergleich der Parallelschaltung von $R_{Reib}$ und $R_{Fe}$ mit
+$R_{Reib+Fe}$ aus 5.3.2}
 
 Die starke Abweichung von 136 $ \Omega$ zwischen dem über Strom und Spannung
 berechneten Widerstand $R_{h, Fe}$ und dem über die Leistung berechneten
@@ -462,9 +463,6 @@ treten keine $P_{Cu2}$ -Verluste auf.
     P_{Cu2} = P_{L} \cdot s
 \end{equation}
 
-\input{tables/drehmomente_vergleichen.tex}
-\input{tables/moment_ueber-n_vergleichen.tex}
-
 Die Synchrone Drehzahl kann nur erreicht werden, wenn die ASM mit einer
 Lastmaschine belastet wird, die die Leistung $P_{Reib}$ aufbringt, sodass der
 Läufer die gleichen Drehzahl wie der Ständer hat.
@@ -473,6 +471,9 @@ Bei der Leerlaufmessung beinhaltet die gemessene Leistung $P_{1}$ daher
 $P_{Cu1}$, $P_{Fe}$ und $P_{Reib}$. Bei der Messung bei Synchroner Drehzahl
 besteht $P_{1}$ lediglich aus $P_{Cu1}$ und $P_{Fe}$.
 
+\input{tables/drehmomente_vergleichen.tex}
+\input{tables/moment_ueber-n_vergleichen.tex}
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\columnwidth]{./figures/moment_ueber-n_vergleichen.pdf}
@@ -480,9 +481,42 @@ besteht $P_{1}$ lediglich aus $P_{Cu1}$ und $P_{Fe}$.
     \label{fig:M_L-mit-M_mech-vergleichen}
 \end{figure}
 
-\newpage
-\section{Weitere Fragen zur ASM}
+\section{Läuferspganung und -frequenz}
 
+Über die Änderung der Drehzahl $n$ wird die Läuferfrequenz und damit die im
+Läufer induzierte Spannung $U_2$ beeinflusst.
+
+\begin{equation}
+    f_2 = \dfrac{n_1 - n}{n_1}  \cdot f_1
+\end{equation}
+%Diagrammm
+
+Es ist zu sehen das die induzierte Spannung mit steigender Drezahl also
+sinkender Frequenz abnimmt, dieser Zusammenhang geht aus dem induktionsgesetz
+hervor wonach die induzierte Spannung abhängig von der realtiv bewegung ist.
+
+Die Läuferfrequenz sinkt bis ins negative. Diese negative Frequenz gitb den
+Generatorbetrieb an, weswegen man hier auch wieder eine steigende
+Läuferspannung messen kann.
+
+\vspace{5mm}
+\subsubsection{ Vergleich des errechneten und gemessenen
+Übersetzungsverhältnisses $ \ddot{u} $}
+
+Will man aus den gemessenen Werten das Übersetzungsverhältniss ü berrechnen
+benötigt man die Spannung $U_{20}$ für eine Drehzahl von $ n = 0 $
+beziehungsweise der synchronfrequenz von $ f_{1} = 50Hz $. Die Ständerspannung
+$ U_{1} $ liegt an 400V an.
+
+Vergleicht man das mit den Werten des Datenblatts errechnete
+Übersetzungsverhältniss von 4,77 mit dem gemessenen von 4,8 liegt ein Fehler
+von knapp 1\%  vor.
+
+\begin{equation}
+    \ddot{u} = \frac{ U_{1} }{ U_{20} } = \frac{ 400V }{ 83,3V } = 4,80
+\end{equation}
+
+\section{Weitere Fragen zur ASM}
 \subsection{Möglichkeiten zur Drehzahländerung einer ASM}
 
 \begin{equation}
@@ -493,22 +527,19 @@ Diese Gleichung zeigt drei Möglichkeiten zur Änderung der Drehzahl auf.
 
 \begin{enumerate}
     \item Änderung der Speisefrequenz mittels Frequenzumrichter
-
     \item Änderung der Polpaarzahl
           \begin{equation}
-              n ~ \frac{1}{p}
+              n \sim \frac{1}{p}
           \end{equation}
           Die Drehzahl ist indirekt proportional zur Polpaarzahl.
-
     \item Änderung des Schlupfs
           Die Änderung der Statorspannung bei einer gleichbleibenden Belastung
           führt zu einer Änderung des Schlupfs. Um im stabilen Betriebsbereich
           zu bleiben, muss $s<s_{k}$ sein.
-
 \end{enumerate}
 
 \subsection{Warum ist der Leerlaufstrom $I_{0}$ der ASM nicht Null? Welchen
-Hauptzweck erfüllt er?}
+    Hauptzweck erfüllt er?}
 
 Der Leerlaufstrom $I_{0}$ dient der Magnetisierung der Hauptreaktanz und kann
 daher als Magnetisierungsstrom $I_{M}$ interpretiert werden. Im Leerlauf kann
@@ -524,11 +555,11 @@ sekundärseitig kurzgeschlossener Transformator. Der Betriebspunkt der ASM im
 Stillstand wird als Kurzschlusspunkt der ASM bezeichnet.
 
 \subsection{Welches Drehmoment liefert eine ASM, wenn sie mit synchroner
-Drehzahl läuft?}
+    Drehzahl läuft?}
 
 Bei synchroner Drehzahl wird keine Spannung im Läufer induziert, weshalb kein
 Strom im Läufer fließt. Das Drehmoment ist abhängig vom Stromfluss: $M \sim
-I^{2}$
+    I^{2}$
 
 Daher geht das Drehmoment bei synchroner Drehzahl gegen Null.
 

@@ -454,57 +454,85 @@ das eine Vernachlässigung von $R_{1}$ zu einem deutlichen Fehler führt.
     \caption{Wirkleistungsfluss für Synchrone Drehzahl und Leerlauf}
 \end{figure}
 
-Im Leerlauf und bei synchroner Drehzahl ist der Schlupf $s=0$. Im Läufer wird keine Spannung
-induziert, das heißt es fließt kein Strom im Läufer. Somit treten keine $P_{Cu2}$ -Verluste auf. 
-$P_{Cu2} = P_{L} /cdot s$ 
+Im Leerlauf und bei synchroner Drehzahl ist der Schlupf $s=0$. Im Läufer wird
+keine Spannung induziert, das heißt es fließt kein Strom im Läufer. Somit
+treten keine $P_{Cu2}$ -Verluste auf.
 
-Die Synchrone Drehzahl kann nur erreicht werden, wenn die ASM mit einer Lastmaschine belastet wird,
-die die Leistung $P_{Reib}$ aufbringt, sodass der Läufer die gleichen Drehzahl wie der Ständer hat.
+\begin{equation} \label{eq:Kupfer2_verluste}
+    P_{Cu2} = P_{L} \cdot s
+\end{equation}
 
-Bei der Leerlaufmessung beinhaltet die gemessene Leistung P_{1} daher P_{Cu1}, P_{Fe} und P_{Reib}.
-Bei der Messung bei Synchroner Drehzahl besteht P_{1} lediglich aus P_{Cu1} und P_{Fe}.
+\input{tables/drehmomente_vergleichen.tex}
+\input{tables/moment_ueber-n_vergleichen.tex}
 
+Die Synchrone Drehzahl kann nur erreicht werden, wenn die ASM mit einer
+Lastmaschine belastet wird, die die Leistung $P_{Reib}$ aufbringt, sodass der
+Läufer die gleichen Drehzahl wie der Ständer hat.
 
+Bei der Leerlaufmessung beinhaltet die gemessene Leistung $P_{1}$ daher
+$P_{Cu1}$, $P_{Fe}$ und $P_{Reib}$. Bei der Messung bei Synchroner Drehzahl
+besteht $P_{1}$ lediglich aus $P_{Cu1}$ und $P_{Fe}$.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\columnwidth]{./figures/moment_ueber-n_vergleichen.pdf}
+    \caption{$(M_L)\text{bzw.}(M_{mech})/n$ Kennlinie}
+    \label{fig:M_L-mit-M_mech-vergleichen}
+\end{figure}
+
+\newpage
 \section{Weitere Fragen zur ASM}
 
 \subsection{Möglichkeiten zur Drehzahländerung einer ASM}
 
 \begin{equation}
-  n = \frac{f_{1}}{p} \cdot (1-s)
+    n = \frac{f_{1}}{p} \cdot (1-s)
 \end{equation}
 
 Diese Gleichung zeigt drei Möglichkeiten zur Änderung der Drehzahl auf.
 
-1. Änderung der Speisefrequenz mittels Frequenzumrichter
+\begin{enumerate}
+    \item Änderung der Speisefrequenz mittels Frequenzumrichter
 
-2. Änderung der Polpaarzahl
-\begin{equation}
-    n ~ \frac{1}{p}
-\end{equation}
-Die Drehzahl ist indirekt proportional zur Polpaarzahl.
+    \item Änderung der Polpaarzahl
+          \begin{equation}
+              n ~ \frac{1}{p}
+          \end{equation}
+          Die Drehzahl ist indirekt proportional zur Polpaarzahl.
 
-3. Änderung des Schlupfs
-Die Änderung der Statorspannung bei einer gleichbleibenden Belastung führt zu einer Änderung
-des Schlupfs. Um im stabilen Betriebsbereich zu bleiben, muss $s<s_{k}$ sein. 
+    \item Änderung des Schlupfs
+          Die Änderung der Statorspannung bei einer gleichbleibenden Belastung
+          führt zu einer Änderung des Schlupfs. Um im stabilen Betriebsbereich
+          zu bleiben, muss $s<s_{k}$ sein.
 
-\subsection{Warum ist der Leerlaufstrom $I_{0}$ der ASM nicht Null? Welchen Hauptzweck erfüllt er?}
+\end{enumerate}
 
-Der Leerlaufstrom $I_{0}$ dient der Magnetisierung der Hauptreaktanz und kann daher als
-Magnetisierungsstrom $I_{M}$ interpretiert werden. Im Leerlauf kann das ESB auf den 
-Ständerwicklungswiderstand und die Hauptreaktanz zusammengefasst werden. Daher nimmt die Maschine 
-im Leerlauf nahezu ausschließlich Blindleistung auf.
+\subsection{Warum ist der Leerlaufstrom $I_{0}$ der ASM nicht Null? Welchen
+Hauptzweck erfüllt er?}
 
-\subsection{Welche Frequenz hat der Strom im Läufer einer ASM im Stillsand?}
+Der Leerlaufstrom $I_{0}$ dient der Magnetisierung der Hauptreaktanz und kann
+daher als Magnetisierungsstrom $I_{M}$ interpretiert werden. Im Leerlauf kann
+das ESB auf den Ständerwicklungswiderstand und die Hauptreaktanz
+zusammengefasst werden. Daher nimmt die Maschine im Leerlauf nahezu
+ausschließlich Blindleistung auf.
 
-Im Stillstand ist der Schlupf $s=1$. Der Läufer steht still und die Läuferströme haben Netzfrequenz. 
-Die ASM verhält sich im Stillstand wie ein sekundärseitig kurzgeschlossener Transformator. 
-Der Betriebspunkt der ASM im Stillstand wird als Kurzschlusspunkt der ASM bezeichnet.
+\subsection{Welche Frequenz hat der Strom im Läufer einer ASM im Stillstand?}
 
-\subsection{Welches Drehmoment liefert eine ASM, wenn sie mit synchroner Drehzalhl läuft?}
+Im Stillstand ist der Schlupf $s=1$. Der Läufer steht still und die
+Läuferströme haben Netzfrequenz. Die ASM verhält sich im Stillstand wie ein
+sekundärseitig kurzgeschlossener Transformator. Der Betriebspunkt der ASM im
+Stillstand wird als Kurzschlusspunkt der ASM bezeichnet.
 
-Bei synchroner Drehzahl wird keine Spannung im Läufer induziert, weshalb kein Strom im Läufer fließt.
-Das Drehmoment ist abhängig vom Stomfluss: $M ~ I^{2}$
+\subsection{Welches Drehmoment liefert eine ASM, wenn sie mit synchroner
+Drehzahl läuft?}
+
+Bei synchroner Drehzahl wird keine Spannung im Läufer induziert, weshalb kein
+Strom im Läufer fließt. Das Drehmoment ist abhängig vom Stromfluss: $M \sim
+I^{2}$
 
 Daher geht das Drehmoment bei synchroner Drehzahl gegen Null.
+
+
+
 
 \end{document}

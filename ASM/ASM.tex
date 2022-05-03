@@ -448,6 +448,46 @@ das eine Vernachlässigung von $R_{1}$ zu einem deutlichen Fehler führt.
 
 \section{Wirkleistungsfluss}
 
+\section{Weitere Fragen zur ASM}
 
+\subsection{Möglichkeiten zur Drehzahländerung einer ASM}
+
+\begin{equation}
+  n = \frac{f_{1}}{p} \cdot (1-s)
+\end{equation}
+
+Diese Gleichung zeigt drei Möglichkeiten zur Änderung der Drehzahl auf.
+
+1. Änderung der Speisefrequenz mittels Frequenzumrichter
+
+2. Änderung der Polpaarzahl
+\begin{equation}
+    n ~ \frac{1}{p}
+\end{equation}
+Die Drehzahl ist indirekt proportional zur Polpaarzahl.
+
+3. Änderung des Schlupfs
+Die Änderung der Statorspannung bei einer gleichbleibenden Belastung führt zu einer Änderung
+des Schlupfs. Um im stabilen Betriebsbereich zu bleiben, muss $s<s_{k}$ sein. 
+
+\subsection{Warum ist der Leerlaufstrom $I_{0}$ der ASM nicht Null? Welchen Hauptzweck erfüllt er?}
+
+Der Leerlaufstrom $I_{0}$ dient der Magnetisierung der Hauptreaktanz und kann daher als
+Magnetisierungsstrom $I_{M}$ interpretiert werden. Im Leerlauf kann das ESB auf den 
+Ständerwicklungswiderstand und die Hauptreaktanz zusammengefasst werden. Daher nimmt die Maschine 
+im Leerlauf nahezu ausschließlich Blindleistung auf.
+
+\subsection{Welche Frequenz hat der Strom im Läufer einer ASM im Stillsand?}
+
+Im Stillstand ist der Schlupf $s=1$. Der Läufer steht still und die Läuferströme haben Netzfrequenz. 
+Die ASM verhält sich im Stillstand wie ein sekundärseitig kurzgeschlossener Transformator. 
+Der Betriebspunkt der ASM im Stillstand wird als Kurzschlusspunkt der ASM bezeichnet.
+
+\subsection{Welches Drehmoment liefert eine ASM, wenn sie mit synchroner Drehzalhl läuft?}
+
+Bei synchroner Drehzahl wird keine Spannung im Läufer induziert, weshalb kein Strom im Läufer fließt.
+Das Drehmoment ist abhängig vom Stomfluss: $M ~ I^{2}$
+
+Daher geht das Drehmoment bei synchroner Drehzahl gegen Null.
 
 \end{document}

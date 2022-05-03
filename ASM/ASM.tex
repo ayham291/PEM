@@ -461,8 +461,40 @@ $P_{Cu2} = P_{L} /cdot s$
 Die Synchrone Drehzahl kann nur erreicht werden, wenn die ASM mit einer Lastmaschine belastet wird,
 die die Leistung $P_{Reib}$ aufbringt, sodass der Läufer die gleichen Drehzahl wie der Ständer hat.
 
-Bei der Leerlaufmessung beinhaltet die gemessene Leistung P_{1} daher P_{Cu1}, P_{Fe} und P_{Reib}.
-Bei der Messung bei Synchroner Drehzahl besteht P_{1} lediglich aus P_{Cu1} und P_{Fe}.
+Bei der Leerlaufmessung beinhaltet die gemessene Leistung $P_{1}$ daher $P_{Cu1}$, $P_{Fe}$ und $P_{Reib}$.
+Bei der Messung bei Synchroner Drehzahl besteht $P_{1}$ lediglich aus $P_{Cu1}$ und $P_{Fe}$.
+
+
+
+\section{Läuferspganung und -frequenz}
+
+Über die Änderung der Drehzahl $n$ wird die Läuferfrequenz und damit die im Läufer induzierte Spannung $U_2$ beeinflusst.
+
+\begin{equation}
+    f_2 = \dfrac{n_1 - n}{n_1}  \cdot f_1
+\end{equation}
+%Diagrammm
+
+Es ist zu sehen das die induzierte Spannung mit steigender Drezahl also sinkender Frequenz abnimmt,
+dieser Zusammenhang geht aus dem induktionsgesetz hervor wonach die induzierte Spannung abhängig von der realtiv bewegung ist.
+
+Die Läuferfrequenz sinkt bis ins negative.
+Diese negative Frequenz gitb den Generatorbetrieb an,
+weswegen man hier auch wieder eine steigende Läuferspannung messen kann.
+
+\vspace{5mm}
+\subsubsection{ Vergleich des errechneten und gemessenen Übersetzungsverhältnisses $ \ddot{u} $}
+
+Will man aus den gemessenen Werten das Übersetzungsverhältniss ü berrechnen benötigt man die Spannung $U_{20}$ für eine Drehzahl von $ n = 0 $ beziehungsweise der synchronfrequenz von $ f_{1} = 50Hz $.
+Die Ständerspannung $ U_{1} $ liegt an 400V an.
+
+Vergleicht man das mit den Werten des Datenblatts errechnete Übersetzungsverhältniss von 4,77 mit dem gemessenen von 4,8 liegt ein Fehler von knapp 1\%  vor.
+
+\begin{equation}
+    \ddot{u} = \frac{ U_{1} }{ U_{20} } = \frac{ 400V }{ 83,3V } = 4,80
+\end{equation}
+
+
 
 
 \section{Weitere Fragen zur ASM}
@@ -479,7 +511,7 @@ Diese Gleichung zeigt drei Möglichkeiten zur Änderung der Drehzahl auf.
 
 2. Änderung der Polpaarzahl
 \begin{equation}
-    n ~ \frac{1}{p}
+    n \sim \frac{1}{p}
 \end{equation}
 Die Drehzahl ist indirekt proportional zur Polpaarzahl.
 
@@ -503,7 +535,7 @@ Der Betriebspunkt der ASM im Stillstand wird als Kurzschlusspunkt der ASM bezeic
 \subsection{Welches Drehmoment liefert eine ASM, wenn sie mit synchroner Drehzalhl läuft?}
 
 Bei synchroner Drehzahl wird keine Spannung im Läufer induziert, weshalb kein Strom im Läufer fließt.
-Das Drehmoment ist abhängig vom Stomfluss: $M ~ I^{2}$
+Das Drehmoment ist abhängig vom Stomfluss: $M \sim I^{2}$
 
 Daher geht das Drehmoment bei synchroner Drehzahl gegen Null.
 

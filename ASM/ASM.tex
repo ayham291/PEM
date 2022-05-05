@@ -230,13 +230,13 @@ Da die Maschine im Stern geschaltet ist, ergibt sich für die Spannung $U_k$:
     \boxed{U_k = \frac{U}{\sqrt{3}}} = \frac{113 \si{V}}{\sqrt{3}} = 65,24 \si{V}
 \end{equation}
 
-In der Formel \ref{eq:Kurzschlusswiderstand} einsetzen:
+In die Formel \ref{eq:Kurzschlusswiderstand} einsetzen:
 
 \begin{equation} \label{eq:Kurzschlusswiderstand_calc}
     \boxed{R_k = \frac{65,24\si{V}}{4,2\si{A}}\cdot cos(61,51^\circ) = \underline{7,409 \Omega}}
 \end{equation}
 
-Die Streureaktanzen $X_{1\sigma}$ und $X_{2\sigma}^\prime$ werden mit:
+Die Streureaktanzen $X_{1\sigma}$ und $X_{2\sigma}^\prime$ werden errechnet:
 
 \begin{equation} \label{eq:Streureaktanzen}
     X_{1\sigma} + X_{2\sigma}^\prime = \frac{U_k}{I_k}\cdot sin\varphi_k
@@ -265,7 +265,7 @@ auf nur 55°C kommt man dem gemessenen Wert deutlich näher.
 \end{equation}
 
 \begin{equation}
-    R_{1_{55}}^\prime = R_{1_{20}}^\prime \cdot \dfrac{55^\circ \si{C} + 235^\circ \si{C}}{20^\circ \si{C} + 235^\circ \si{C}} = 2,64 \Omega
+    R_{1_{55}} = R_{1_{20}} \cdot \dfrac{55^\circ \si{C} + 235^\circ \si{C}}{20^\circ \si{C} + 235^\circ \si{C}} = 2,64 \Omega
 \end{equation}
 
 aus (\ref{eq:Kurzschlusswiderstand_gemessen}):
@@ -275,7 +275,7 @@ aus (\ref{eq:Kurzschlusswiderstand_gemessen}):
 
 
 \subsection{Parameterbestimmung aufgrund der Leerlaufmessung}
-\subsubsection{Maschinenparameter $X_h$ und $R_{Fe+Reib}$ aufgrund der Leerlaufmessung}
+\subsubsection{Maschinenparameter der Parallelschaltung aus $X_h$ und $R_{Fe+Reib}$ aufgrund der Leerlaufmessung}
 
 Bei dem folgenden Versuch ist Läuferseitig ein Leerlauf und somit kein
 Läuferstrom $I_{2}$ zu messen. Der fließende Strom besteht ausschließlich aus
@@ -435,7 +435,7 @@ Mit $R_1 = 0\Omega$:
 \input{./tables/klossche_gleichung.tex}
 \input{./tables/kippmoment_im_stillstand.tex}
 
-Der eben berechnete Wert hat eine Abweichung von wenigen Prozent, dies lässt
+Der eben berechnete Wert hat eine Abweichung von wenigen Prozent im Vergleich zu dem in Kapitel I. gemessenen Drehmoment von 30,6Nm, dies lässt
 sich mit den typischen Messungenauigkeiten begründen. Klar zu sehen ist aber
 das eine Vernachlässigung von $R_{1}$ zu einem deutlichen Fehler führt.
 
@@ -500,7 +500,7 @@ Läufer induzierte Spannung $U_2$ beeinflusst.
 \end{figure}
 
 Es ist zu sehen das die induzierte Spannung mit steigender Drehzahl also
-sinkender Frequenz abnimmt, dieser Zusammenhang geht aus dem induktionsgesetz
+sinkender Frequenz abnimmt, dieser Zusammenhang geht aus dem Induktionsgesetz
 hervor wonach die induzierte Spannung abhängig von der relativ Bewegung ist.
 
 Die Läuferfrequenz sinkt bis ins negative. Diese negative Frequenz gibt den
@@ -541,7 +541,7 @@ Diese Gleichung zeigt drei Möglichkeiten zur Änderung der Drehzahl auf.
               n \sim \frac{1}{p}
           \end{equation}
           Die Drehzahl ist indirekt proportional zur Polpaarzahl.
-    \item Änderung des Schlupfs
+    \item Änderung des Schlupfs\\
           Die Änderung der Statorspannung bei einer gleichbleibenden Belastung
           führt zu einer Änderung des Schlupfs. Um im stabilen Betriebsbereich
           zu bleiben, muss $s<s_{k}$ sein.
@@ -551,7 +551,7 @@ Diese Gleichung zeigt drei Möglichkeiten zur Änderung der Drehzahl auf.
     Hauptzweck erfüllt er?}
 
 Der Leerlaufstrom $I_{0}$ dient der Magnetisierung der Hauptreaktanz und kann
-daher als Magnetisierungsstrom $I_{M}$ interpretiert werden. Im Leerlauf kann
+daher als Magnetisierungsstrom $I_{m}$ interpretiert werden. Im Leerlauf kann
 das ESB auf den Ständerwicklungswiderstand und die Hauptreaktanz
 zusammengefasst werden. Daher nimmt die Maschine im Leerlauf nahezu
 ausschließlich Blindleistung auf.

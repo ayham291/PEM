@@ -91,7 +91,7 @@ The machine is operated without (a) load. This way the voltage $U_q$ which is
 induced in the generator can be measured. The induced voltage is also called
 electric motor force ($\mathrm{EMK}$).
 
-For this experiment the initial torque 5000rpm will be reduced by 1000rpm each
+For this experiment the initial 5000rpm will be reduced by 1000rpm each
 time. At 5000rpm the motor has its maximum voltage $U_A = 11.94V$.
 
 The machine constant $c$ and the magnetic flux $\Phi_E$ are experimentally
@@ -101,7 +101,7 @@ determined (different for each machine).
     c \cdot \Phi_E = \frac{U_q}{n} = \frac{8.8\si{V}}{4000/60\si{s}} = 0.132\si{Vs}
 \end{equation}
 
-The arithmetic mean is calculated using the following formula.\\
+The arithmetic mean is calculated using the following formula.
 \begin{equation}
     \frac{ \sum\limits_{k = 1}^{5} c \cdot \Phi_E}{5} = \frac{0.6621Vs}{5} = 0.13242Vs
 \end{equation}
@@ -119,8 +119,8 @@ The arithmetic mean is calculated using the following formula.\\
 
 \section{loaded generator mode}
 In the generator mode the generator is powering the machine. The rotations per minute are set at 4000rpm.
-In the previouse experiment we meassured the motor voltage at 4000rpm. Through out this experiment this voltage will be kept at $U_A(4000rpm) = 9.61$.
-The load resistors are getting conneted into the cicuite one by one.
+In the previous experiment we measured the motor voltage at 4000rpm. Through out this experiment this voltage will be kept at $U_q(4000rpm) = 8.8V$.
+The load resistors are getting connected into the circuit one by one.
 
 
 \begin{figure}[htbp]
@@ -130,15 +130,32 @@ The load resistors are getting conneted into the cicuite one by one.
     \label{fig:Anlaufmoment}
 \end{figure}
 
-To determin the resistance $R_A$ of the generator we need the potential over said resistor as well as the current running through it.\\
+To determine the resistance $R_A$ of the generator we need the potential over said resistor as well as the current running through it.
 
 \begin{equation}
-    R_A = \frac{U_{RA}}{I_A} = \frac{U_A - U_q}{I_A} = ??????
+    R_A = \frac{U_{RA}}{I_A} = \frac{U_A - U_q}{I_A}
+\end{equation}
+
+With the formula of the arithmetic mean
+\begin{equation}
+    \frac{ \sum\limits_{k = 1}^{6} c \cdot R_A}{6} = 1,62 \Omega
 \end{equation}
 
 
 \section{loaded motor mode}
-In the motor mode the voltage $U_A$ is kept konstant, first at 9V later at 12V.
+In the motor mode the voltage $U_A$ is kept constant, first at 9V later at 12V.
+
+The correlation between rotor rotations and voltage are given:
+\begin{equation}
+    n_0 = \frac{U_A}{c \cdot Phi_E}
+\end{equation}
+
+The correlation between the inner torque and armature current:
+\begin{equation}
+    M_i = \frac{c \cdot \Phi_E \cdot I_A}{2 \pi}
+\end{equation}
+
+Between the inner and the measured torque, Power is lost through Copper $P_{Cu}$ and friction $ P_{fric}$.
 
 
 \input{tables/4.3_Belasteter_Motor_UA9V.tex}

@@ -96,9 +96,12 @@
 \section{Idle mode experiment}
 \subsection{Electric motor force}
 
-The machine is operated without (a) load. This way the voltage $U_q$ which is
-induced in the generator can be measured. The induced voltage is also called
-electric motor force ($\mathrm{EMK}$).
+The induced voltage in the generator is called electric motor force
+($\mathrm{EMK}$).
+
+To examine the relation between the electric motor force and the rotations $n$,
+the machine is operated without load and the motor voltage and current as well
+as $\mathrm{EMK}$ which is induced in the generator can be measured.
 
 For this experiment the initial 5000rpm will be reduced by 1000rpm each
 time. At 5000rpm the motor has its maximum voltage $U_A = 11.94V$.
@@ -110,20 +113,24 @@ determined (different for each machine).
     c \cdot \Phi_E = \frac{U_q}{n} = \frac{8.8\si{V}}{4000/60\si{s}} = 0.132\si{Vs}
 \end{equation}
 
-The arithmetic mean is calculated using the following formula.
+The arithmetic mean is calculated using the following equation:
+
 \begin{equation}
-    \frac{ \sum\limits_{k = 1}^{5} c \cdot \Phi_E}{5} = \frac{0.6621Vs}{5} = 0.13242Vs
+    \frac{1}{5}\sum\limits_{k = 1}^{5} c \cdot \Phi_E = \frac{0.6621Vs}{5} = 0.13242Vs
 \end{equation}
-
-
-\input{tables/Leerlaufversuch.tex}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\columnwidth]{plots/4.1_Leerlaufversuch.pdf}
     \caption{Idle Mode}
-    \label{fig:Anlaufmoment}
+    \label{fig:emk_n}
 \end{figure}
+
+\input{tables/Leerlaufversuch.tex}
+
+In the figure \ref{fig:emk_n} the relation between the electric motor force
+$EMK$ and the number of rotations $n$ is shown. The relation is linear and they
+are directly proportional.
 
 
 \section{loaded generator mode}

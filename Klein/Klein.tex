@@ -134,27 +134,32 @@ are directly proportional.
 
 
 \section{loaded generator mode}
-In the generator mode the generator is powering the machine. The rotations per minute are set at 4000rpm.
-In the previous experiment we measured the motor voltage at 4000rpm. Through out this experiment this voltage will be kept at $U_q(4000rpm) = 8.8V$.
-The load resistors are getting connected into the circuit one by one.
+
+In the generator mode the generator machine is powering the motor. The
+rotations are set at 4000rpm.
+
+In the previous experiment the motor voltage was measured at 4000rpm.
+Throughout this experiment this voltage will be kept constant at $U_q(4000rpm)
+    = 8.8V$. The load resistors are getting connected into the circuit one by one.
 
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\columnwidth]{plots/4.2_Belasteter_Generator_4000.pdf}
     \caption{loaded generator mode}
-    \label{fig:Anlaufmoment}
+    \label{fig:load_generator_mode}
 \end{figure}
 
-To determine the resistance $R_A$ of the generator we need the potential over said resistor as well as the current running through it.
+To determine the resistance $R_A$ of the generator the potential over said
+resistor as well as the current running through it are needed.
 
-\begin{equation}
+\begin{equation} \label{eq:R_A_resistance}
     R_A = \frac{U_{RA}}{I_A} = \frac{U_A - U_q}{I_A}
 \end{equation}
 
-With the formula of the arithmetic mean
+With the arithmetic mean
 \begin{equation}
-    \frac{ \sum\limits_{k = 1}^{6} c \cdot R_A}{6} = 1,62 \Omega
+    \frac{1}{6} \sum\limits_{k = 1}^{6} c \cdot R_A = 1.62 \Omega
 \end{equation}
 
 

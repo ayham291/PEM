@@ -164,30 +164,58 @@ With the arithmetic mean
 
 
 \section{loaded motor mode}
-In the motor mode the voltage $U_A$ is kept constant, first at 9V later at 12V.
+In the loaded motor mode the voltage $U_A$ is kept constant, first at 9V later
+at 12V, and is loaded through the generator with the load resistors (S1 - S5).
 
-The correlation between rotor rotations and voltage are given:
-\begin{equation}
-    n_0 = \frac{U_A}{c \cdot Phi_E}
+The relation between the armature voltage and the rotor rotations is given
+through the machine constant $c$ as described in \ref{eq:rotor_rotations}.
+
+\begin{equation} \label{eq:rotor_rotations}
+    n_0 = \frac{U_A}{c \cdot \Phi_E}
 \end{equation}
 
-The correlation between the inner torque and armature current:
-\begin{equation}
+And the correlation between the inner torque and armature current:
+
+\begin{equation} \label{eq:inner_tourque}
     M_i = \frac{c \cdot \Phi_E \cdot I_A}{2 \pi}
 \end{equation}
 
-Between the inner and the measured torque, Power is lost through Copper $P_{Cu}$ and friction $ P_{fric}$.
+% From the correlation in \ref{eq:inner_tourque}
+
+Between the inner and the measured torque, Power is lost through Copper
+$P_\mathrm{Cu}$ and friction $ P_\text{fric}$.
+
+To measure the Torque of the motor a metal arm (10cm) fixed to its bearing and
+a small scale are used. With the following equation the torque is calculated
+for each of the resistor combinations:
+
+\begin{equation}
+    M = \text{Weight} \cdot \mathrm{g} \cdot \text{length} \qquad g=9.81
+    \si{m}^2 \quad l=10 \si{cm}
+    \label{eq:tourqe_weight_length}
+\end{equation}
 
 
 \input{tables/4.3_Belasteter_Motor_UA9V.tex}
 
 \input{tables/4.3_Belasteter_Motor_UA12V.tex}
 
+The plot \ref{fig:loaded_motor_mode} shows the torque of the motor driven with
+two different voltages $U_A$. It also displays the linear correlation between the
+torque and rotations.
+
+After disregarding the Copper and friction and assuming linearity the plot
+\ref{fig:loaded_motor_mode} perfectly demonstrates how changing the voltage
+results in a shift of the torque curve on the n-axis and showing the direct
+proportionality between the voltage and the rotations. Also see equation
+\ref{eq:rotor_rotations}.
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\columnwidth]{plots/4.3_Belasteter_Motor_UA9V_12V.pdf}
     \caption{loaded motor mode}
-    \label{fig:Anlaufmoment}
+    \label{fig:loaded_motor_mode}
 \end{figure}
+
 
 \end{document}
